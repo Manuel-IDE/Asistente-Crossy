@@ -10,7 +10,8 @@
 
 </head>
 
-<body id="body-chat">
+<body>
+    <div id="chat-wrapper">
     <div id="chat-container">
         <div id="chat-header">
             <div id="header-img">
@@ -50,43 +51,37 @@
         </div>
     </div>
     <button id="open-button"><i class="fa-solid fa-comment"></i></button>
+    </div>
 </body>
 <style>
-    #body-chat {
-        font-family: 'Albert Sans', sans-serif;
-        display: flex;
-        flex-direction: column;
-        height: 600px;
-        align-items: end;
-        margin: 0;
-        background-color: #f0f0f0;
-        padding-left: 1%;
-        padding-right: 1%;
-        align-self: bottom;
-        width: 400px;
-        justify-self: end;
-	position: fixed;
-	z-index: 9999;
-    }
+  #chat-wrapper {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 10px;
+      z-index: 9999;
+      box-sizing: border-box;
+  }
 
-    #chat-container {
-        width: 400px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        height: 600px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        box-shadow: 0px 4px 10px #0000003D;
-        opacity: 0;
-        transform: scale(0.9);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        pointer-events: none;
-        margin-right: 5px;
-    }
+  #chat-container {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px #0000003D;
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+  }
 
     #chat-container.show {
         opacity: 1;
